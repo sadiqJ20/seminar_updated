@@ -25,7 +25,6 @@ interface Booking {
   start_time: string;
   end_time: string;
   attendees_count: number;
-  student_years?: string[];
   required_ac: boolean;
   required_mic: boolean;
   required_projector: boolean;
@@ -354,16 +353,7 @@ const BookingCard = ({ booking, onStatusUpdate, showActions = false, userRole, o
                   <p className="text-sm text-muted-foreground">{booking.guest_lecture_names}</p>
                 </div>
               )}
-              {booking.student_years && booking.student_years.length > 0 && (
-                <div>
-                  <p className="font-medium">Student Years</p>
-                  <div className="flex gap-2 mt-1">
-                    {booking.student_years.map(year => (
-                      <Badge key={year} variant="outline">{year}</Badge>
-                    ))}
-                  </div>
-                </div>
-              )}
+              {/* Removed student_years display */}
               <div>
                 <p className="font-medium">HOD Name</p>
                 <p className="text-sm text-muted-foreground">{booking.hod_name}</p>

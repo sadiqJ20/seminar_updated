@@ -53,7 +53,7 @@ CREATE TABLE public.bookings (
     start_time TIME NOT NULL,
     end_time TIME NOT NULL,
     attendees_count INTEGER NOT NULL,
-    student_years TEXT[], -- Array of selected years
+    
     required_ac BOOLEAN DEFAULT false,
     required_mic BOOLEAN DEFAULT false,
     required_projector BOOLEAN DEFAULT false,
